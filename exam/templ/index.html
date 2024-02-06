@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+      .bs-example {
+        margin: 0px;
+
+      }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .video-container {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      position: relative;
+      z-index:1;
+    }
+
+      .bg-dark {
+      background-color: #212529!important;
+
+  }
+      .navbar-brand {
+        font-size: 20px;
+        font-family: sans-serif;
+
+      }
+      footer {
+      padding: 0px 0px 0px 0px;
+      background-color: #212529;
+      margin: 0px;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 23px;
+      width: 60px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
+
+    .fa:hover {
+      opacity: 0.9;
+      text-decoration: none;
+    }
+
+
+
+    p {
+      text-align: center;
+
+    }
+    .jumbotron{
+    margin-bottom: 0px;
+  }
+    </style>
+  </head>
+
+<body>
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark bg-warning fixed-top" style="background-color: #212529;">
+    <a style="color:green;text-decoration: none; " href="/"><font face = "" size =" 5">Online Examination</font><br /></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+
+        </div>
+
+        <div class="navbar-nav">
+          <a style="padding-left: 30px;" href="/" class="nav-item nav-link"> Home</a>
+          <a href="/teacher/teacherclick" class="nav-item nav-link">Teacher</a>
+          <a href="/student/studentclick" class="nav-item nav-link">Student</a>
+          <a href="/adminclick" class="nav-item nav-link">Admin</a>
+
+        </div>
+
+
+
+
+      </div>
+    </nav>
+  </div>
+  <div class="video-container">
+    <video autoplay loop muted>
+      <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4">
+      <!-- Add additional source elements for different video formats (e.g., WebM, Ogg) -->
+    </video>
+  </div>
+<br>
+
+      <div class="container d-flex align-items-center justify-content-center text-center h-100">
+        <section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+  <div class="container text-center">
+    <h2 class="display-3 " style="color:purple;"><marquee><img src="data:image/jpeg;base64,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"/>Online Examination System</marquee></h2>
+    <marquee>
+    <p class="display-4 d-none d-sm-block" style="color:white;">Attend your examinations online!</p>
+    <p class="lead" style="color:white"><b><i>Sign Up now to start your first online examination</i></b></p>
+
+
+    <p style="color:green;"><strong> Start Your Journey Here:</strong></p>
+    <a href="/student/studentsignup" class="btn btn-lg btn-info" style="padding-right: 35px; border-radius: 0%;"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign Up as Student</a>
+    <!--
+      <a href="/answer_evaluation/evaluate" class="btn btn-lg btn-success" style="padding-right: 35px; border-radius: 0%;"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Explore  descriptive answer evalaution</a>
+     -->
+      <button id="navigateButton" class="btn btn-lg btn-success" style="padding-right: 35px; border-radius: 0%;"><i class="fa fa-graduation-cap" aria-hidden="true"></i>Navigate to Answer Evaluation</button>
+     </marquee>
+    <br><br><br>
+  </div>
+</section>
+      </div>
+
+
+<footer class=" bg-secondary text-light">
+
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="wow fadeInUp footer-copyright">
+          <p>
+            Copyright &copy; Online Examination System -2023 </p><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
